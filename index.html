@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>CRISSANTY CONSTRUCTION</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600&display=swap');
+
+:root {
+    /* Nueva Paleta Crissanty Construction */
+    --turquesa: #00A8A8;     /* Azul Turquesa */
+    --mostaza: #FFB800;      /* Mostaza vibrante */
+    --gris-fondo: #F2F4F7;   /* Gris muy claro */
+    --gris-texto: #4A5568;   /* Gris oscuro para lectura */
+    --blanco: #FFFFFF;
+    --oscuro: #1A202C;       /* Para contrastes fuertes */
+}
+
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0;user-select:none}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--gris-fondo);
+    color: var(--oscuro);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Banner Principal con Gradiente Turquesa */
+.h {
+    background: linear-gradient(135deg, rgba(0,168,168,0.9), rgba(0,168,168,0.7)), url('img/construccion_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px 40px;
+    text-align: center;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 10px 25px rgba(0,168,168,0.2);
+    animation: fadeIn 0.8s ease-out;
+}
+
+.l {
+    max-width: 220px;
+    width: 70%;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+    margin-bottom: 15px;
+}
+
+.h h1 {
+    font-family: 'Montserrat';
+    font-size: 1.4rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-top: 3px solid var(--mostaza); /* Detalle en mostaza */
+    display: inline-block;
+    padding-top: 5px;
+}
+
+/* Contenedor de Menú */
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+/* Botones Estilo Construcción */
+.c {
+    background: var(--blanco);
+    padding: 20px;
+    border-radius: 18px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    border-left: 6px solid var(--turquesa); /* Acento lateral */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.5s forwards;
+    transition: transform 0.2s;
+}
+
+.c:active {
+    transform: scale(.97);
+    background: #FDFDFD;
+}
+
+.t {
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    color: var(--turquesa);
+    text-transform: uppercase;
+}
+
+.d {
+    font-size: .8rem;
+    color: var(--gris-texto);
+    margin-top: 2px;
+}
+
+/* Botón Destacado en Mostaza (Contacto/Presupuesto) */
+.p {
+    background: var(--mostaza);
+    border-left: none;
+    box-shadow: 0 6px 15px rgba(255,184,0,0.3);
+}
+
+.p .t, .p .d {
+    color: var(--oscuro); /* Texto oscuro sobre fondo claro para legibilidad */
+}
+
+/* Animaciones */
+.c:nth-child(1){animation-delay: 0.1s}
+.c:nth-child(2){animation-delay: 0.2s}
+.c:nth-child(3){animation-delay: 0.3s}
+.c:nth-child(4){animation-delay: 0.4s}
+
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: var(--blanco);
+    border-top: 1px solid #E2E8F0;
+}
+
+.f1 { font-size: .75rem; font-weight: 700; color: var(--oscuro); }
+.f2 { font-size: .7rem; color: var(--gris-texto); margin-top: 4px; }
+.dev { color: var(--turquesa); font-weight: 700; }
+
+</style>
+<script>
+/* Protección Sistematikos */
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.onkeydown = function(e) {
+    if(e.keyCode == 123 || e.keyCode == 116 || (e.ctrlKey && e.shiftKey && e.keyCode == 73)) return false;
+};
+</script>
+</head>
+<body>
+
+<header class="h">
+    <img src="img/logo_crissanty.png" class="l" alt="Crissanty Logo">
+    <h1>Building Your Dreams</h1>
+</header>
+
+<main>
+    <a href="servicios.html" class="c">
+        <span class="t">Nuestros Servicios</span>
+        <span class="d">Remodelaciones, obra civil y diseño.</span>
+    </a>
+    <a href="proyectos.html" class="c">
+        <span class="t">Portafolio</span>
+        <span class="d">Explora nuestras obras finalizadas.</span>
+    </a>
+    <a href="equipo.html" class="c">
+        <span class="t">Sobre Nosotros</span>
+        <span class="d">Calidad y experiencia en construcción.</span>
+    </a>
+    <a href="cotizar.html" class="c p">
+        <span class="t">Solicitar Presupuesto</span>
+        <span class="d">Hablemos de tu próximo proyecto.</span>
+    </a>
+</main>
+
+<footer>
+    <p class="f1">© 2026 CRISSANTY CONSTRUCTION.</p>
+    <p class="f2">Developed by <span class="dev">Sistematikos</span></p>
+</footer>
+
+</body>
+</html>
