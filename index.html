@@ -5,159 +5,177 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>CRISSANTY CONSTRUCTION - Construyendo el Futuro</title>
+<title>CRISSANTY CONSTRUCTION</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-    /* Paleta Crissanty Construction Actualizada */
-    --turquesa: #00A8A8;     /* Azul Turquesa principal */
-    --turquesa-oscuro: #008080; /* Variación para degradados */
-    --mostaza: #FFB800;      /* Mostaza vibrante para acciones */
-    --gris-fondo: #F2F4F7;   /* Gris muy claro de fondo */
-    --gris-texto: #4A5568;   /* Gris oscuro para lectura */
+    --turquesa: #00A8A8;
+    --mostaza: #FFB800;
+    --gris-claro: #F8FAFC;
+    --gris-borde: #E2E8F0;
+    --texto-oscuro: #1E293B;
+    --texto-suave: #64748B;
     --blanco: #FFFFFF;
-    --oscuro: #1A202C;       /* Para contrastes fuertes */
 }
 
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0;user-select:none}
 
 body {
     font-family: 'Inter', sans-serif;
-    background: var(--gris-fondo);
-    color: var(--oscuro);
+    background: var(--gris-claro);
+    color: var(--texto-oscuro);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden;
 }
 
-/* --- Banner Principal Atractivo y Persuasivo --- */
-.h {
-    background: linear-gradient(135deg, rgba(0,168,168,1) 0%, rgba(0,128,128,0.9) 100%), url('img/construccion_bg.jpg'); /* Fondo turquesa con imagen sutil */
-    background-size: cover;
-    background-position: center;
-    padding: 70px 30px 60px; /* Más padding para que el logo respire */
+/* --- Banner Horizontal Profesional --- */
+.header-banner {
+    background: var(--blanco);
+    padding: 40px 20px;
     text-align: center;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
-    box-shadow: 0 10px 25px rgba(0,168,168,0.2);
-    animation: fadeIn 0.8s ease-out;
-}
-
-/* Estilo del Logo en el Banner */
-.logo-container {
-    background-color: var(--blanco); /* Fondo blanco para el logo transparente */
-    border-radius: 50%; /* Contenedor circular */
-    width: 150px; /* Tamaño del logo */
-    height: 150px;
+    position: relative;
+    border-bottom: 4px solid var(--mostaza); /* Línea de acento inferior */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin: 0 auto 30px; /* Centrado y margen inferior */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Sombra suave */
-    border: 5px solid var(--mostaza); /* Borde mostaza para resaltar */
+    justify-content: center;
 }
 
-.l {
-    max-width: 110px; /* Tamaño de la imagen del logo dentro del contenedor */
-    width: 80%;
-}
-
-/* Mensaje Persuasivo */
-.h h1 {
-    font-family: 'Montserrat';
-    font-size: 1.8rem;
-    color: var(--blanco);
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    line-height: 1.2;
+/* Imagen del Logo Horizontal */
+.logo-img {
+    max-width: 280px; /* Tamaño ideal para banner horizontal */
+    width: 85%;
+    height: auto;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     margin-bottom: 10px;
 }
 
-.h p {
-    color: var(--blanco);
-    opacity: 0.9;
-    font-size: 1rem;
-    max-width: 300px;
-    margin: 0 auto;
-    font-weight: 400;
+.slogan {
+    font-family: 'Montserrat';
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 500;
 }
 
-/* --- Contenedor de Menú --- */
+/* --- Menú de Navegación Estilo App Premium --- */
 main {
-    padding: 20px;
+    padding: 30px 20px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
     flex: 1;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
 }
 
-/* Botones Estilo Construcción (Se mantienen) */
-.c {
+.menu-item {
     background: var(--blanco);
-    padding: 20px;
-    border-radius: 18px;
+    padding: 22px 25px;
+    border-radius: 20px;
     text-decoration: none;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--gris-borde);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto visual de barra lateral */
+.menu-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 6px;
+    background: var(--turquesa);
+}
+
+.menu-item:active {
+    transform: scale(0.96);
+    background: #f1f5f9;
+}
+
+.content-text {
+    display: flex;
     flex-direction: column;
-    border-left: 6px solid var(--turquesa); /* Acento lateral */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slideUp 0.5s forwards;
-    transition: transform 0.2s;
 }
 
-.c:active {
-    transform: scale(.97);
-    background: #FDFDFD;
-}
-
-.t {
+.item-title {
     font-family: 'Montserrat';
-    font-size: 1rem;
+    font-size: 1.05rem;
+    color: var(--texto-oscuro);
+    margin-bottom: 4px;
+    font-weight: 800;
+}
+
+.item-desc {
+    font-size: 0.8rem;
+    color: var(--texto-suave);
+    line-height: 1.3;
+}
+
+/* Icono de flecha minimalista */
+.arrow {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--gris-borde);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--turquesa);
-    text-transform: uppercase;
+    font-weight: bold;
 }
 
-.d {
-    font-size: .8rem;
-    color: var(--gris-texto);
-    margin-top: 2px;
+/* Botón Destacado (Call to Action) */
+.featured {
+    background: var(--turquesa);
+    border: none;
+    box-shadow: 0 10px 25px rgba(0, 168, 168, 0.25);
 }
 
-/* Botón Destacado en Mostaza (Contacto/Presupuesto) */
-.p {
-    background: var(--mostaza);
-    border-left: none;
-    box-shadow: 0 6px 15px rgba(255,184,0,0.3);
+.featured::before { background: var(--mostaza); }
+
+.featured .item-title, .featured .item-desc {
+    color: var(--blanco);
 }
 
-.p .t, .p .d {
-    color: var(--oscuro); /* Texto oscuro sobre fondo claro para legibilidad */
+.featured .arrow {
+    border-color: rgba(255,255,255,0.3);
+    color: var(--blanco);
 }
-
-/* Animaciones */
-.c:nth-child(1){animation-delay: 0.1s}
-.c:nth-child(2){animation-delay: 0.2s}
-.c:nth-child(3){animation-delay: 0.3s}
-.c:nth-child(4){animation-delay: 0.4s}
-
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
 /* --- Footer --- */
 footer {
     text-align: center;
-    padding: 25px;
-    background: var(--blanco);
-    border-top: 1px solid #E2E8F0;
+    padding: 30px;
+    margin-top: 20px;
 }
 
-.f1 { font-size: .75rem; font-weight: 700; color: var(--oscuro); }
-.f2 { font-size: .7rem; color: var(--gris-texto); margin-top: 4px; }
+.f1 { font-size: 0.75rem; color: var(--texto-oscuro); font-weight: 700; letter-spacing: 1px; }
+.f2 { font-size: 0.7rem; color: var(--texto-suave); margin-top: 5px; }
 .dev { color: var(--turquesa); font-weight: 700; }
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-item { animation: fadeInUp 0.5s ease backwards; }
+.menu-item:nth-child(1) { animation-delay: 0.1s; }
+.menu-item:nth-child(2) { animation-delay: 0.2s; }
+.menu-item:nth-child(3) { animation-delay: 0.3s; }
+.menu-item:nth-child(4) { animation-delay: 0.4s; }
 
 </style>
 <script>
@@ -170,35 +188,47 @@ document.onkeydown = function(e) {
 </head>
 <body>
 
-<header class="h">
-    <div class="logo-container">
-        <img src="logo_transparente.png" class="l" alt="Crissanty Construction Logo">
-    </div>
-    <h1>Construyendo el Futuro</h1>
-    <p>Calidad, innovación y excelencia en cada proyecto.</p>
+<header class="header-banner">
+    <img src="logo_transparente.png" class="logo-img" alt="Crissanty Construction">
+    <div class="slogan">Quality & Excellence</div>
 </header>
 
 <main>
-    <a href="servicios.html" class="c">
-        <span class="t">Nuestros Servicios</span>
-        <span class="d">Remodelaciones, obra civil y diseño.</span>
+    <a href="servicios.html" class="menu-item">
+        <div class="content-text">
+            <span class="item-title">SERVICIOS</span>
+            <span class="item-desc">Soluciones integrales de construcción.</span>
+        </div>
+        <div class="arrow">→</div>
     </a>
-    <a href="proyectos.html" class="c">
-        <span class="t">Portafolio</span>
-        <span class="d">Explora nuestras obras finalizadas.</span>
+
+    <a href="proyectos.html" class="menu-item">
+        <div class="content-text">
+            <span class="item-title">PORTAFOLIO</span>
+            <span class="item-desc">Nuestros proyectos más destacados.</span>
+        </div>
+        <div class="arrow">→</div>
     </a>
-    <a href="equipo.html" class="c">
-        <span class="t">Sobre Nosotros</span>
-        <span class="d">Calidad y experiencia en construcción.</span>
+
+    <a href="nosotros.html" class="menu-item">
+        <div class="content-text">
+            <span class="item-title">NOSOTROS</span>
+            <span class="item-desc">Trayectoria y compromiso profesional.</span>
+        </div>
+        <div class="arrow">→</div>
     </a>
-    <a href="cotizar.html" class="c p">
-        <span class="t">Solicitar Presupuesto</span>
-        <span class="d">Hablemos de tu próximo proyecto.</span>
+
+    <a href="contacto.html" class="menu-item featured">
+        <div class="content-text">
+            <span class="item-title">PRESUPUESTO</span>
+            <span class="item-desc">Solicita una asesoría hoy mismo.</span>
+        </div>
+        <div class="arrow">→</div>
     </a>
 </main>
 
 <footer>
-    <p class="f1">© 2026 CRISSANTY CONSTRUCTION.</p>
+    <p class="f1">© 2026 CRISSANTY CONSTRUCTION</p>
     <p class="f2">Developed by <span class="dev">Sistematikos</span></p>
 </footer>
 
