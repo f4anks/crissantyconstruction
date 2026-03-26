@@ -5,15 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>CRISSANTY CONSTRUCTION</title>
+<title>CRISSANTY CONSTRUCTION - Construyendo el Futuro</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600&display=swap');
 
 :root {
-    /* Nueva Paleta Crissanty Construction */
-    --turquesa: #00A8A8;     /* Azul Turquesa */
-    --mostaza: #FFB800;      /* Mostaza vibrante */
-    --gris-fondo: #F2F4F7;   /* Gris muy claro */
+    /* Paleta Crissanty Construction Actualizada */
+    --turquesa: #00A8A8;     /* Azul Turquesa principal */
+    --turquesa-oscuro: #008080; /* Variación para degradados */
+    --mostaza: #FFB800;      /* Mostaza vibrante para acciones */
+    --gris-fondo: #F2F4F7;   /* Gris muy claro de fondo */
     --gris-texto: #4A5568;   /* Gris oscuro para lectura */
     --blanco: #FFFFFF;
     --oscuro: #1A202C;       /* Para contrastes fuertes */
@@ -31,12 +32,12 @@ body {
     overflow-x: hidden;
 }
 
-/* Banner Principal con Gradiente Turquesa */
+/* --- Banner Principal Atractivo y Persuasivo --- */
 .h {
-    background: linear-gradient(135deg, rgba(0,168,168,0.9), rgba(0,168,168,0.7)), url('img/construccion_bg.jpg');
+    background: linear-gradient(135deg, rgba(0,168,168,1) 0%, rgba(0,128,128,0.9) 100%), url('img/construccion_bg.jpg'); /* Fondo turquesa con imagen sutil */
     background-size: cover;
     background-position: center;
-    padding: 60px 20px 40px;
+    padding: 70px 30px 60px; /* Más padding para que el logo respire */
     text-align: center;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
@@ -44,25 +45,46 @@ body {
     animation: fadeIn 0.8s ease-out;
 }
 
-.l {
-    max-width: 220px;
-    width: 70%;
-    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
-    margin-bottom: 15px;
+/* Estilo del Logo en el Banner */
+.logo-container {
+    background-color: var(--blanco); /* Fondo blanco para el logo transparente */
+    border-radius: 50%; /* Contenedor circular */
+    width: 150px; /* Tamaño del logo */
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px; /* Centrado y margen inferior */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Sombra suave */
+    border: 5px solid var(--mostaza); /* Borde mostaza para resaltar */
 }
 
+.l {
+    max-width: 110px; /* Tamaño de la imagen del logo dentro del contenedor */
+    width: 80%;
+}
+
+/* Mensaje Persuasivo */
 .h h1 {
     font-family: 'Montserrat';
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: var(--blanco);
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    border-top: 3px solid var(--mostaza); /* Detalle en mostaza */
-    display: inline-block;
-    padding-top: 5px;
+    line-height: 1.2;
+    margin-bottom: 10px;
 }
 
-/* Contenedor de Menú */
+.h p {
+    color: var(--blanco);
+    opacity: 0.9;
+    font-size: 1rem;
+    max-width: 300px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* --- Contenedor de Menú --- */
 main {
     padding: 20px;
     display: flex;
@@ -71,7 +93,7 @@ main {
     flex: 1;
 }
 
-/* Botones Estilo Construcción */
+/* Botones Estilo Construcción (Se mantienen) */
 .c {
     background: var(--blanco);
     padding: 20px;
@@ -125,6 +147,7 @@ main {
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
+/* --- Footer --- */
 footer {
     text-align: center;
     padding: 25px;
@@ -148,8 +171,11 @@ document.onkeydown = function(e) {
 <body>
 
 <header class="h">
-    <img src="img/logo_crissanty.png" class="l" alt="Crissanty Logo">
-    <h1>Building Your Dreams</h1>
+    <div class="logo-container">
+        <img src="logo_transparente.png" class="l" alt="Crissanty Construction Logo">
+    </div>
+    <h1>Construyendo el Futuro</h1>
+    <p>Calidad, innovación y excelencia en cada proyecto.</p>
 </header>
 
 <main>
