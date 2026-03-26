@@ -5,76 +5,77 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>CRISSANTY CONSTRUCTION</title>
+<title>CRISSANTY CONSTRUCTION - Building Your Dreams</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap');
 
 :root {
+    /* Paleta Crissanty Construction */
     --turquesa: #00A8A8;
     --mostaza: #FFB800;
-    --gris-claro: #F8FAFC;
-    --gris-borde: #E2E8F0;
-    --texto-oscuro: #1E293B;
-    --texto-suave: #64748B;
+    --gris-fondo: #F2F4F7;
+    --gris-texto: #4A5568;
     --blanco: #FFFFFF;
+    --oscuro: #1A202C;
 }
 
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0;user-select:none}
 
 body {
     font-family: 'Inter', sans-serif;
-    background: var(--gris-claro);
-    color: var(--texto-oscuro);
+    background: var(--gris-fondo);
+    color: var(--oscuro);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* --- Banner Horizontal Profesional --- */
-.header-banner {
-    background: var(--blanco);
+.h {
+    background: var(--blanco); /* Fondo blanco puro para el logo */
     padding: 40px 20px;
     text-align: center;
-    position: relative;
-    border-bottom: 4px solid var(--mostaza); /* Línea de acento inferior */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border-bottom: 5px solid var(--mostaza); /* Línea de acento inferior en mostaza */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    animation: fadeIn 0.8s ease-out;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
-/* Imagen del Logo Horizontal */
-.logo-img {
-    max-width: 280px; /* Tamaño ideal para banner horizontal */
-    width: 85%;
+/* Imagen del Logo Actualizada */
+.l {
+    max-width: 320px; /* Tamaño ideal para banner horizontal */
+    width: 90%;
     height: auto;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     margin-bottom: 10px;
 }
 
-.slogan {
+/* Slogan minimalista debajo del logo */
+.h p {
     font-family: 'Montserrat';
     font-size: 0.85rem;
-    color: var(--texto-suave);
+    color: var(--gris-texto);
     text-transform: uppercase;
     letter-spacing: 3px;
     font-weight: 500;
 }
 
-/* --- Menú de Navegación Estilo App Premium --- */
+/* --- Contenedor de Menú --- */
 main {
     padding: 30px 20px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 15px;
     flex: 1;
-    max-width: 500px;
+    max-width: 500px; /* Centrado en pantallas más grandes */
     margin: 0 auto;
     width: 100%;
 }
 
-.menu-item {
+/* Botones Estilo Premium Construction */
+.c {
     background: var(--blanco);
     padding: 22px 25px;
     border-radius: 20px;
@@ -82,14 +83,16 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid var(--gris-borde);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.03);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.5s forwards;
+    transition: transform 0.2s, background 0.2s;
 }
 
-/* Efecto visual de barra lateral */
-.menu-item::before {
+/* Detalle lateral turquesa */
+.c::before {
     content: '';
     position: absolute;
     left: 0;
@@ -97,11 +100,12 @@ main {
     height: 100%;
     width: 6px;
     background: var(--turquesa);
+    border-radius: 20px 0 0 20px;
 }
 
-.menu-item:active {
-    transform: scale(0.96);
-    background: #f1f5f9;
+.c:active {
+    transform: scale(.97);
+    background: #F8FAFC;
 }
 
 .content-text {
@@ -109,73 +113,63 @@ main {
     flex-direction: column;
 }
 
-.item-title {
+.t {
     font-family: 'Montserrat';
     font-size: 1.05rem;
-    color: var(--texto-oscuro);
-    margin-bottom: 4px;
+    color: var(--oscuro);
+    margin-bottom: 3px;
     font-weight: 800;
 }
 
-.item-desc {
-    font-size: 0.8rem;
-    color: var(--texto-suave);
-    line-height: 1.3;
+.d {
+    font-size: .8rem;
+    color: var(--gris-texto);
+    font-weight: 400;
 }
 
-/* Icono de flecha minimalista */
+/* Flecha minimalista */
 .arrow {
-    width: 24px;
-    height: 24px;
-    border: 2px solid var(--gris-borde);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: var(--turquesa);
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
 /* Botón Destacado (Call to Action) */
-.featured {
+.p {
     background: var(--turquesa);
     border: none;
-    box-shadow: 0 10px 25px rgba(0, 168, 168, 0.25);
+    box-shadow: 0 8px 25px rgba(0, 168, 168, 0.2);
 }
 
-.featured::before { background: var(--mostaza); }
+.p::before {
+    background: var(--mostaza); /* Detalle mostaza en el botón destacado */
+}
 
-.featured .item-title, .featured .item-desc {
+.p .t, .p .d, .p .arrow {
     color: var(--blanco);
 }
 
-.featured .arrow {
-    border-color: rgba(255,255,255,0.3);
-    color: var(--blanco);
-}
+/* Animaciones Escalonadas */
+.c:nth-child(1){animation-delay: 0.1s}
+.c:nth-child(2){animation-delay: 0.2s}
+.c:nth-child(3){animation-delay: 0.3s}
+.c:nth-child(4){animation-delay: 0.4s}
+
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
 /* --- Footer --- */
 footer {
     text-align: center;
     padding: 30px;
+    background: var(--blanco);
+    border-top: 1px solid #EEEEEE;
     margin-top: 20px;
 }
 
-.f1 { font-size: 0.75rem; color: var(--texto-oscuro); font-weight: 700; letter-spacing: 1px; }
-.f2 { font-size: 0.7rem; color: var(--texto-suave); margin-top: 5px; }
+.f1 { font-size: .75rem; font-weight: 700; color: var(--oscuro); letter-spacing: 1px; }
+.f2 { font-size: .7rem; color: var(--gris-texto); margin-top: 5px; }
 .dev { color: var(--turquesa); font-weight: 700; }
-
-/* Animaciones */
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.menu-item { animation: fadeInUp 0.5s ease backwards; }
-.menu-item:nth-child(1) { animation-delay: 0.1s; }
-.menu-item:nth-child(2) { animation-delay: 0.2s; }
-.menu-item:nth-child(3) { animation-delay: 0.3s; }
-.menu-item:nth-child(4) { animation-delay: 0.4s; }
 
 </style>
 <script>
@@ -188,42 +182,39 @@ document.onkeydown = function(e) {
 </head>
 <body>
 
-<header class="header-banner">
-    <img src="logo_transparente.png" class="logo-img" alt="Crissanty Construction">
-    <div class="slogan">Quality & Excellence</div>
+<header class="h">
+    <img src="logo.png" class="l" alt="Crissanty Construction">
+    <p>Quality & Excellence</p>
 </header>
 
 <main>
-    <a href="servicios.html" class="menu-item">
+    <a href="servicios.html" class="c">
         <div class="content-text">
-            <span class="item-title">SERVICIOS</span>
-            <span class="item-desc">Soluciones integrales de construcción.</span>
+            <span class="t">NUESTROS SERVICIOS</span>
+            <span class="d">Remodelaciones, obra civil y diseño.</span>
         </div>
-        <div class="arrow">→</div>
+        <span class="arrow">→</span>
     </a>
-
-    <a href="proyectos.html" class="menu-item">
+    <a href="proyectos.html" class="c">
         <div class="content-text">
-            <span class="item-title">PORTAFOLIO</span>
-            <span class="item-desc">Nuestros proyectos más destacados.</span>
+            <span class="t">PORTAFOLIO</span>
+            <span class="d">Explora nuestras obras destacadas.</span>
         </div>
-        <div class="arrow">→</div>
+        <span class="arrow">→</span>
     </a>
-
-    <a href="nosotros.html" class="menu-item">
+    <a href="equipo.html" class="c">
         <div class="content-text">
-            <span class="item-title">NOSOTROS</span>
-            <span class="item-desc">Trayectoria y compromiso profesional.</span>
+            <span class="t">SOBRE NOSOTROS</span>
+            <span class="d">Calidad y experiencia profesional.</span>
         </div>
-        <div class="arrow">→</div>
+        <span class="arrow">→</span>
     </a>
-
-    <a href="contacto.html" class="menu-item featured">
+    <a href="cotizar.html" class="c p">
         <div class="content-text">
-            <span class="item-title">PRESUPUESTO</span>
-            <span class="item-desc">Solicita una asesoría hoy mismo.</span>
+            <span class="t">SOLICITAR PRESUPUESTO</span>
+            <span class="d">Hablemos de tu próximo proyecto.</span>
         </div>
-        <div class="arrow">→</div>
+        <span class="arrow">→</span>
     </a>
 </main>
 
