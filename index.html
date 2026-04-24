@@ -1,3 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>CRISSANTY CONSTRUCTION</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --turquesa: #00A8A8;
+    --mostaza: #FFB800;
+    --gris-fondo: #F2F4F7;
+    --gris-texto: #4A5568;
+    --blanco: #FFFFFF;
+    --oscuro: #1A202C;
+}
+
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0;user-select:none}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--gris-fondo);
+    color: var(--oscuro);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* --- Banner Horizontal --- */
+.h {
+    background: var(--blanco);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--mostaza);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.l {
+    max-width: 320px;
+    width: 90%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.h p {
+    font-family: 'Montserrat';
+    font-size: 0.85rem;
+    color: var(--gris-texto);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+/* --- Menú Principal --- */
+main {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.c {
+    background: var(--blanco);
+    padding: 22px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(0,0,0,0.03);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.c::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 6px;
+    background: var(--turquesa);
+    border-radius: 20px 0 0 20px;
+}
+
+.c:active { transform: scale(.97); background: #F8FAFC; }
+
+.content-text { display: flex; flex-direction: column; }
+
+.t {
+    font-family: 'Montserrat';
+    font-size: 1.05rem;
+    color: var(--oscuro);
+    margin-bottom: 3px;
+    font-weight: 800;
+}
+
+.d { font-size: .8rem; color: var(--gris-texto); }
+
+.arrow { color: var(--turquesa); font-weight: bold; }
+
+/* Botón Destacado */
+.p { background: var(--turquesa); border: none; }
+.p::before { background: var(--mostaza); }
+.p .t, .p .d, .p .arrow { color: var(--blanco); }
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: var(--blanco);
+    border-top: 1px solid #EEEEEE;
+}
+
+.f1 { font-size: .75rem; font-weight: 700; color: var(--oscuro); }
+.dev { color: var(--turquesa); font-weight: 700; }
+</style>
+
+<script>
+/* Protección Sistematikos */
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.onkeydown = function(e){
+    if(e.keyCode==123 || e.keyCode==116 || (e.ctrlKey && e.shiftKey && e.keyCode==73)) return false;
+};
+</script>
+</head>
+<body>
+
+<header class="h">
+    <img src="logo.png" class="l" alt="Crissanty Construction">
+    <p>Quality & Excellence</p>
+</header>
+
 <main>
     <a href="index_servicios.html" class="c">
         <div class="content-text">
@@ -10,7 +154,7 @@
     <a href="index_proyectos.html" class="c">
         <div class="content-text">
             <span class="t">PORTAFOLIO</span>
-            <span class="d">Explora nuestras obras destacadas.</span>
+            <span class="d">Nuestros proyectos destacados.</span>
         </div>
         <span class="arrow">→</span>
     </a>
@@ -18,16 +162,26 @@
     <a href="index_nosotros.html" class="c">
         <div class="content-text">
             <span class="t">SOBRE NOSOTROS</span>
-            <span class="d">Calidad y trayectoria profesional.</span>
+            <span class="d">Trayectoria y compromiso.</span>
         </div>
         <span class="arrow">→</span>
     </a>
 
     <a href="index_contacto.html" class="c p">
         <div class="content-text">
-            <span class="t">SOLICITAR PRESUPUESTO</span>
+            <span class="t">PRESUPUESTO</span>
             <span class="d">Hablemos de tu próximo proyecto.</span>
         </div>
         <span class="arrow">→</span>
     </a>
 </main>
+
+<footer>
+    <p class="f1">© 2026 CRISSANTY CONSTRUCTION</p>
+    <p style="font-size: .7rem; color: #64748B; margin-top: 5px;">
+        Developed by <span class="dev">Sistematikos</span>
+    </p>
+</footer>
+
+</body>
+</html>
