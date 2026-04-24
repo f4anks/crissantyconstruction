@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Servicios - Crissanty Construction</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --turquesa: #00A8A8;
+    --mostaza: #FFB800;
+    --gris-fondo: #F2F4F7;
+    --gris-texto: #4A5568;
+    --blanco: #FFFFFF;
+    --oscuro: #1A202C;
+}
+
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0;user-select:none}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--gris-fondo);
+    color: var(--oscuro);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Compacto con Botón Regresar */
+.h-nav {
+    background: var(--blanco);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid var(--turquesa);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: var(--turquesa);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.h-nav h1 {
+    font-family: 'Montserrat';
+    font-size: 1.1rem;
+    color: var(--oscuro);
+    text-transform: uppercase;
+}
+
+/* Contenido Principal */
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.section-title {
+    font-family: 'Montserrat';
+    font-size: 0.9rem;
+    color: var(--turquesa);
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* Tarjetas de Servicios */
+.s-card {
+    background: var(--blanco);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--mostaza);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.s-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.s-icon {
+    font-size: 2rem;
+    background: var(--gris-fondo);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.s-title {
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+    color: var(--oscuro);
+}
+
+.s-desc {
+    font-size: 0.9rem;
+    color: var(--gris-texto);
+    line-height: 1.5;
+}
+
+.s-list {
+    margin-top: 5px;
+    padding-left: 5px;
+}
+
+.s-item {
+    font-size: 0.85rem;
+    color: var(--oscuro);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+.s-item::before {
+    content: '✔';
+    color: var(--turquesa);
+    font-weight: bold;
+}
+
+/* Footer (Simplificado) */
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: auto;
+}
+
+.f1 { font-size: .7rem; font-weight: 700; color: var(--oscuro); opacity: 0.6; }
+
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+</style>
+<script>
+/* Protección Sistematikos */
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.onkeydown = function(e) {
+    if(e.keyCode == 123 || e.keyCode == 116 || (e.ctrlKey && e.shiftKey && e.keyCode == 73)) return false;
+};
+</script>
+</head>
+<body>
+
+<header class="h-nav">
+    <a href="index.html" class="back-btn">←</a>
+    <h1>Nuestros Servicios</h1>
+</header>
+
+<main>
+    <p class="section-title">CONSTRUCCIÓN Y DISEÑO</p>
+
+    <div class="s-card">
+        <div class="s-header">
+            <div class="s-icon">🏠</div>
+            <div class="s-title">Viviendas y Locales</div>
+        </div>
+        <p class="s-desc">Desarrollamos proyectos integrales desde el diseño conceptual hasta la entrega final de llaves.</p>
+        <div class="s-list">
+            <div class="s-item">Casas Residenciales</div>
+            <div class="s-item">Locales Comerciales</div>
+            <div class="s-item">Remodelaciones Modernas</div>
+        </div>
+    </div>
+
+    <div class="s-card">
+        <div class="s-header">
+            <div class="s-icon">🏗️</div>
+            <div class="s-title">Infraestructura</div>
+        </div>
+        <p class="s-desc">Especialistas en obras civiles de gran escala y albañilería técnica profesional.</p>
+        <div class="s-list">
+            <div class="s-item">Proyectos de Infraestructura</div>
+            <div class="s-item">Albañilería en General</div>
+            <div class="s-item">Estructuras y Acabados</div>
+        </div>
+    </div>
+
+    <p class="section-title">BIENES RAÍCES</p>
+
+    <div class="s-card" style="border-top-color: var(--turquesa);">
+        <div class="s-header">
+            <div class="s-icon">🤝</div>
+            <div class="s-title">Compra y Venta</div>
+        </div>
+        <p class="s-desc">Asesoría profesional en la gestión inmobiliaria para asegurar tu inversión.</p>
+        <div class="s-list">
+            <div class="s-item">Venta de Casas y Aptos</div>
+            <div class="s-item">Comercialización de Locales</div>
+            <div class="s-item">Gestión de Inmuebles</div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p class="f1">© 2026 CRISSANTY CONSTRUCTION</p>
+</footer>
+
+</body>
+</html>
