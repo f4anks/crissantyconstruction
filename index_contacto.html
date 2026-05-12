@@ -5,17 +5,18 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Contacto - Crissanty Construction</title>
+<title>Contacto Corporativo - Crissanty Blue Construction</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@300;400;600&display=swap');
 
 :root {
     --turquesa: #00A8A8;
     --mostaza: #FFB800;
-    --gris-fondo: #F2F4F7;
+    --gris-fondo: #F4F7F9;
     --gris-texto: #4A5568;
+    --gris-suave: #94A3B8;
     --blanco: #FFFFFF;
-    --oscuro: #1A202C;
+    --oscuro: #0F172A;
 }
 
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0;user-select:none}
@@ -29,133 +30,180 @@ body {
     min-height: 100vh;
 }
 
-/* Header */
+/* Header Ejecutivo */
 .h-nav {
     background: var(--blanco);
-    padding: 20px;
+    padding: 25px 20px;
     display: flex;
     align-items: center;
-    border-bottom: 3px solid var(--mostaza);
+    border-bottom: 1px solid #E2E8F0;
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
-.back-btn { text-decoration: none; color: var(--turquesa); font-size: 1.5rem; font-weight: bold; margin-right: 15px; }
-.h-nav h1 { font-family: 'Montserrat'; font-size: 1.1rem; text-transform: uppercase; }
-
-/* Contenido */
-main { padding: 25px 20px; animation: fadeIn 0.6s ease-out; flex: 1; }
-
-/* Tarjeta de Datos Fiscales */
-.info-card {
-    background: var(--blanco);
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    margin-bottom: 20px;
-    border-top: 5px solid var(--turquesa);
-}
-
-.company-name {
-    font-family: 'Montserrat';
-    font-size: 1.1rem;
-    color: var(--turquesa);
-    margin-bottom: 5px;
-}
-
-.rnc {
-    font-size: 0.85rem;
-    color: var(--gris-texto);
-    font-weight: 600;
-    margin-bottom: 15px;
-    display: block;
-}
-
-.address-box {
-    border-top: 1px solid #EEE;
-    padding-top: 15px;
+.back-btn { 
+    text-decoration: none; 
+    color: var(--oscuro); 
+    font-size: 1.2rem; 
+    margin-right: 20px;
     display: flex;
-    gap: 12px;
+    align-items: center;
 }
 
-.icon-map { font-size: 1.2rem; }
-
-.address-text {
-    font-size: 0.85rem;
+.h-nav h1 { 
+    font-family: 'Montserrat'; 
+    font-size: 0.9rem; 
+    text-transform: uppercase; 
+    letter-spacing: 2px;
     color: var(--oscuro);
+}
+
+/* Contenido Principal */
+main { padding: 35px 25px; animation: fadeIn 0.6s ease-out; flex: 1; max-width: 600px; margin: 0 auto; width: 100%; }
+
+.headline {
+    font-family: 'Montserrat';
+    font-size: 1.6rem;
+    color: var(--oscuro);
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.subheadline {
+    font-size: 0.95rem;
+    color: var(--gris-texto);
+    margin-bottom: 35px;
     line-height: 1.5;
 }
 
-/* Botones de Acción Directa */
-.action-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 10px;
+/* Bloque de Información Legal y Ubicación */
+.card-legal {
+    background: var(--blanco);
+    padding: 30px;
+    border-radius: 4px; /* Bordes menos redondeados para mayor seriedad */
+    border-left: 4px solid var(--turquesa);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    margin-bottom: 30px;
 }
 
-.btn-contact {
-    padding: 18px;
-    border-radius: 15px;
+.label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--turquesa);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.company-title {
+    font-family: 'Montserrat';
+    font-size: 1.15rem;
+    color: var(--oscuro);
+    margin-bottom: 4px;
+    display: block;
+}
+
+.fiscal-id {
+    font-size: 0.9rem;
+    color: var(--gris-suave);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.address-content {
+    font-size: 0.95rem;
+    color: var(--gris-texto);
+    line-height: 1.7;
+    border-top: 1px solid #F1F5F9;
+    padding-top: 20px;
+}
+
+/* Botones de Acción Minimalistas */
+.action-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-premium {
+    padding: 20px;
+    text-align: center;
     text-decoration: none;
     font-family: 'Montserrat';
     font-weight: 700;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    transition: transform 0.2s;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
 }
 
-.btn-contact:active { transform: scale(0.96); }
+.btn-wa {
+    background: var(--oscuro);
+    color: var(--blanco);
+}
 
-.whatsapp { background: #25D366; color: white; box-shadow: 0 6px 15px rgba(37, 211, 102, 0.3); }
-.maps { background: var(--turquesa); color: white; box-shadow: 0 6px 15px rgba(0, 168, 168, 0.2); }
+.btn-map {
+    background: transparent;
+    color: var(--oscuro);
+    border: 1px solid var(--oscuro);
+}
 
-/* Footer */
-footer { text-align: center; padding: 30px; font-size: 0.7rem; color: var(--gris-texto); }
+.btn-premium:active { transform: translateY(2px); opacity: 0.8; }
 
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+footer { 
+    text-align: center; 
+    padding: 40px 20px; 
+    font-size: 0.65rem; 
+    color: var(--gris-suave); 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 </style>
 </head>
 <body>
 
 <header class="h-nav">
-    <a href="index.html" class="back-btn">←</a>
-    <h1>Contacto & Ubicación</h1>
+    <a href="index.html" class="back-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+    </a>
+    <h1>Corporativo</h1>
 </header>
 
 <main>
-    <div class="info-card">
-        <span class="company-name">Crissanty Blue Construction, SRL</span>
-        <span class="rnc">RNC: 133-01720-2</span>
+    <h2 class="headline">Hablemos de su próximo proyecto.</h2>
+    <p class="subheadline">Estamos listos para gestionar sus necesidades de construcción y bienes raíces con la rigurosidad que su inversión merece.</p>
+
+    <div class="card-legal">
+        <span class="label">Identidad Legal</span>
+        <span class="company-title">Crissanty Blue Construction, SRL</span>
+        <span class="fiscal-id">RNC: 133-01720-2</span>
         
-        <div class="address-box">
-            <span class="icon-map">📍</span>
-            <p class="address-text">
-                Av. Monumental Nro. 6, Residencial del Parque Verde, 
-                Edificio B, Apto 203, Alto de Arroyo Hondo III.<br>
-                <strong>Santo Domingo, República Dominicana.</strong>
-            </p>
+        <span class="label" style="margin-top: 20px;">Sede Central</span>
+        <div class="address-content">
+            Av. Monumental Nro. 6, Residencial del Parque Verde,<br>
+            Edificio B, Apto 203, Alto de Arroyo Hondo III.<br>
+            <strong>Santo Domingo, República Dominicana.</strong>
         </div>
     </div>
 
-    <div class="action-buttons">
-        <a href="https://wa.me/18090000000" class="btn-contact whatsapp">
-            <span>💬</span> HABLAR POR WHATSAPP
+    <div class="action-stack">
+        <a href="https://wa.me/18090000000" class="btn-premium btn-wa">
+            Consultoría Inmediata
         </a>
 
-        <a href="https://www.google.com/maps/search/Residencial+del+Parque+Verde+Santo+Domingo" target="_blank" class="btn-contact maps">
-            <span>🗺️</span> VER EN GOOGLE MAPS
+        <a href="https://maps.google.com" target="_blank" class="btn-premium btn-map">
+            Localizar en Mapa
         </a>
     </div>
 </main>
 
 <footer>
     <p>© 2026 CRISSANTY BLUE CONSTRUCTION, SRL</p>
-    <p>Sistematikos - Frank Hernandez</p>
+    <p style="margin-top:5px;">Tecnología aplicada por Sistematikos</p>
 </footer>
 
 <script>
