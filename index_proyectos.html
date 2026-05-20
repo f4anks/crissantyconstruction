@@ -30,7 +30,7 @@ body {
     min-height: 100vh;
 }
 
-/* Header Ejecutivo con Regresar */
+/* Header Ejecutivo */
 .h-nav {
     background: var(--blanco);
     padding: 25px 20px;
@@ -58,11 +58,11 @@ body {
 }
 
 /* Contenido Principal */
-main { padding: 35px 20px; animation: fadeIn 0.6s ease-out; flex: 1; max-width: 800px; margin: 0 auto; width: 100%; }
+main { padding: 35px 20px; animation: fadeIn 0.6s ease-out; flex: 1; max-width: 1000px; margin: 0 auto; width: 100%; }
 
 .headline {
     font-family: 'Montserrat';
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: var(--oscuro);
     margin-bottom: 8px;
     line-height: 1.2;
@@ -70,31 +70,39 @@ main { padding: 35px 20px; animation: fadeIn 0.6s ease-out; flex: 1; max-width: 
 }
 
 .subheadline {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--gris-texto);
     margin-bottom: 35px;
     text-align: center;
 }
 
-/* Categorías sutiles */
+/* Categorías */
 .cat-label {
     font-family: 'Montserrat';
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 800;
     color: var(--turquesa);
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    margin: 25px 0 15px 0;
+    margin: 35px 0 20px 0;
     display: block;
     border-bottom: 2px solid var(--mostaza);
-    padding-bottom: 5px;
+    padding-bottom: 6px;
     width: fit-content;
 }
 
-/* Galería Grid Reutilizable */
+/* Estructura Grid Responsiva de Alto Nivel */
 .portfolio-grid {
-    display: block;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+@media(min-width: 710px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 /* Tarjetas de Proyectos */
@@ -102,15 +110,15 @@ main { padding: 35px 20px; animation: fadeIn 0.6s ease-out; flex: 1; max-width: 
     background: var(--blanco);
     border-radius: 4px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.03);
     border: 1px solid #E2E8F0;
-    margin-bottom: 25px;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .img-container {
     width: 100%;
-    height: 240px;
+    height: 250px;
     background: #E2E8F0;
     overflow: hidden;
 }
@@ -122,7 +130,11 @@ main { padding: 35px 20px; animation: fadeIn 0.6s ease-out; flex: 1; max-width: 
 }
 
 .project-info {
-    padding: 20px;
+    padding: 22px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project-title {
@@ -130,41 +142,43 @@ main { padding: 35px 20px; animation: fadeIn 0.6s ease-out; flex: 1; max-width: 
     font-size: 0.95rem;
     color: var(--oscuro);
     font-weight: 700;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .project-desc {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--gris-texto);
     line-height: 1.5;
 }
 
-/* Banner de Cierre Persuasivo */
+/* Banner de Cierre */
 .cta-banner {
-    margin-top: 40px;
+    margin-top: 50px;
     background: var(--oscuro);
-    padding: 30px;
+    padding: 35px;
     text-align: center;
+    border-radius: 4px;
 }
 
 .cta-title {
     font-family: 'Montserrat';
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--blanco);
     margin-bottom: 8px;
 }
 
 .cta-desc {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--gris-suave);
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .btn-action {
     background: var(--turquesa);
     color: var(--blanco);
-    padding: 15px 30px;
+    padding: 15px 35px;
     text-decoration: none;
     font-family: 'Montserrat';
     font-weight: 700;
@@ -172,9 +186,10 @@ main { padding: 35px 20px; animation: fadeIn 0.6s ease-out; flex: 1; max-width: 
     text-transform: uppercase;
     display: inline-block;
     letter-spacing: 1px;
+    transition: background 0.2s;
 }
 
-footer { text-align: center; padding: 40px 20px; font-size: 0.6rem; color: var(--gris-suave); text-transform: uppercase; letter-spacing: 1px; }
+footer { text-align: center; padding: 50px 20px 40px 20px; font-size: 0.65rem; color: var(--gris-suave); text-transform: uppercase; letter-spacing: 1px; }
 
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 </style>
@@ -197,86 +212,36 @@ footer { text-align: center; padding: 40px 20px; font-size: 0.6rem; color: var(-
     <div class="portfolio-grid">
         <div class="project-card">
             <div class="img-container">
-                <img src="img/blue1.png" alt="Proyecto Blue 1">
+                <img src="img/blue1.png" alt="Proyecto Blue I">
             </div>
             <div class="project-info">
-                <h3 class="project-title">Proyecto Blue I</h3>
-                <p class="project-desc">Diseño de vivienda unifamiliar moderna con optimización de luz natural y acabados de lujo.</p>
+                <div>
+                    <h3 class="project-title">Proyecto Blue I</h3>
+                    <p class="project-desc">Diseño de fachada unifamiliar moderna con optimización avanzada de luz natural, terrazas integradas y acabados premium.</p>
+                </div>
             </div>
         </div>
 
         <div class="project-card">
             <div class="img-container">
-                <img src="img/blue2.png" alt="Proyecto Blue 2">
+                <img src="img/blue2.png" alt="Proyecto Blue II">
             </div>
             <div class="project-info">
-                <h3 class="project-title">Proyecto Blue II</h3>
-                <p class="project-desc">Complejo residencial premium con altos estándares de seguridad y distribución funcional.</p>
+                <div>
+                    <h3 class="project-title">Proyecto Blue II</h3>
+                    <p class="project-desc">Complejo habitacional multifamiliar de líneas vanguardistas, priorizando la seguridad estructural y la alta plusvalía urbana.</p>
+                </div>
             </div>
         </div>
 
         <div class="project-card">
             <div class="img-container">
-                <img src="img/blue3.png" alt="Proyecto Blue 3">
+                <img src="img/blue3.png" alt="Proyecto Blue III - Área de Recreación">
             </div>
             <div class="project-info">
-                <h3 class="project-title">Proyecto Blue III</h3>
-                <p class="project-desc">Edificación residencial de vanguardia, integrando materiales sostenibles y confort.</p>
+                <div>
+                    <h3 class="project-title">Proyecto Blue III</h3>
+                    <p class="project-desc">Oasis residencial integrado: arquitectura paisajística y de exteriores que fusiona una piscina de diseño con espacios funcionales al aire libre.</p>
+                </div>
             </div>
         </div>
-
-        <div class="project-card">
-            <div class="img-container">
-                <img src="img/blue4.png" alt="Proyecto Blue 4">
-            </div>
-            <div class="project-info">
-                <h3 class="project-title">Proyecto Blue IV</h3>
-                <p class="project-desc">El pináculo de nuestra línea residencial. Arquitectura sofisticada para alta plusvalía.</p>
-            </div>
-        </div>
-    </div>
-
-    <span class="cat-label">Infraestructura y Obra Civil</span>
-
-    <div class="portfolio-grid">
-        <div class="project-card">
-            <div class="img-container">
-                <img src="img/obras1.png" alt="Obra Civil 1">
-            </div>
-            <div class="project-info">
-                <h3 class="project-title">Desarrollo de Infraestructura I</h3>
-                <p class="project-desc">Ingeniería de base y vaciado de estructuras de concreto armado para alta resistencia portante.</p>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="img-container">
-                <img src="img/obras2.png" alt="Obra Civil 2">
-            </div>
-            <div class="project-info">
-                <h3 class="project-title">Albañilería Especializada II</h3>
-                <p class="project-desc">Gestión y ejecución técnica de muros de bloques, cerramientos y acabados industriales firmes.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="cta-banner">
-        <h3 class="cta-title">¿Planea su próxima inversión?</h3>
-        <p class="cta-desc">Permita que nuestro equipo de ingeniería y bienes raíces gestione su obra con total garantía.</p>
-        <a href="index_contacto.html" class="btn-action">Iniciar Consulta</a>
-    </div>
-</main>
-
-<footer>
-    <p>© 2026 CRISSANTY BLUE CONSTRUCTION, SRL</p>
-    <p style="margin-top:5px;">Sistematikos - Frank Hernandez</p>
-</footer>
-
-<script>
-/* Protección Sistematikos */
-document.addEventListener('contextmenu', e => e.preventDefault());
-document.onkeydown = function(e){ if(e.keyCode==123 || e.keyCode==116 || (e.ctrlKey && e.shiftKey && e.keyCode==73)) return false; };
-</script>
-
-</body>
-</html>
