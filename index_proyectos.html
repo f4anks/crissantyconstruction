@@ -91,7 +91,7 @@ main { padding: 35px 20px; animation: fadeIn 0.6s ease-out; flex: 1; max-width: 
     width: fit-content;
 }
 
-/* Estructura Grid Responsiva de Alto Nivel */
+/* Grid Responsiva */
 .portfolio-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -186,7 +186,6 @@ main { padding: 35px 20px; animation: fadeIn 0.6s ease-out; flex: 1; max-width: 
     text-transform: uppercase;
     display: inline-block;
     letter-spacing: 1px;
-    transition: background 0.2s;
 }
 
 footer { text-align: center; padding: 50px 20px 40px 20px; font-size: 0.65rem; color: var(--gris-suave); text-transform: uppercase; letter-spacing: 1px; }
@@ -236,12 +235,74 @@ footer { text-align: center; padding: 50px 20px 40px 20px; font-size: 0.65rem; c
 
         <div class="project-card">
             <div class="img-container">
-                <img src="img/blue3.png" alt="Proyecto Blue III - Área de Recreación">
+                <img src="img/blue3.png" alt="Proyecto Blue III - Recreación">
             </div>
             <div class="project-info">
                 <div>
                     <h3 class="project-title">Proyecto Blue III</h3>
-                    <p class="project-desc">Oasis residencial integrado: arquitectura paisajística y de exteriores que fusiona una piscina de diseño con espacios funcionales al aire libre.</p>
+                    <p class="project-desc">Oasis residencial integrado: arquitectura paisajística y de exteriores que fusiona una piscina de diseño moderno con espacios funcionales al aire libre.</p>
                 </div>
             </div>
         </div>
+
+        <div class="project-card">
+            <div class="img-container">
+                <img src="img/blue4.png" alt="Proyecto Blue IV - Interiores">
+            </div>
+            <div class="project-info">
+                <div>
+                    <h3 class="project-title">Proyecto Blue IV</h3>
+                    <p class="project-desc">Suite residencial de lujo y confort: ingeniería de detalles en diseño de interiores sofisticado, priorizando la amplitud, iluminación y revestimientos de primera clase.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <span class="cat-label">Obras de Infraestructura y Preparación de Terreno</span>
+
+    <div class="portfolio-grid">
+        <div class="project-card">
+            <div class="img-container">
+                <img src="img/obra1.png" alt="Infraestructura I - Maquinaria">
+            </div>
+            <div class="project-info">
+                <div>
+                    <h3 class="project-title">Obra I: Limpieza y Acondicionamiento</h3>
+                    <p class="project-desc">Fase inicial de remoción de capa vegetal, acondicionamiento y limpieza profunda del terreno utilizando maquinaria pesada especializada para garantizar un área de construcción óptima.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="img-container">
+                <img src="img/obra2.png" alt="Infraestructura II - Compactación">
+            </div>
+            <div class="project-info">
+                <div>
+                    <h3 class="project-title">Obra II: Aplanado y Compactación</h3>
+                    <p class="project-desc">Nivelación e ingeniería de suelos mediante equipos de aplanado técnico y compactación, asegurando la máxima densidad, solidez y estabilidad de la sub-base antes de la cimentación.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-banner">
+        <h3 class="cta-title">¿Planea su próxima inversión?</h3>
+        <p class="cta-desc">Permita que nuestro equipo de ingeniería y bienes raíces gestione su obra con total garantía legal y técnica.</p>
+        <a href="index_contacto.html" class="btn-action">Iniciar Consulta</a>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 CRISSANTY BLUE CONSTRUCTION, SRL</p>
+    <p style="margin-top:5px;">Sistematikos - Frank Hernandez</p>
+</footer>
+
+<script>
+/* Protección de Código de Sistematikos */
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.onkeydown = function(e){ if(e.keyCode==123 || e.keyCode==116 || (e.ctrlKey && e.shiftKey && e.keyCode==73)) return false; };
+</script>
+
+</body>
+</html>
